@@ -1,0 +1,29 @@
+# Regexes linking empirical claims to the statistics backing them.
+# Each pattern carries a named "value" group parsed into paper_value (float).
+statistic_patterns:
+  estimate:
+    - '\b(?:coefficient|estimate)s?\s+(?:of|is|was|=|\()?\s*(?P<value>-?\(?\d+(?:\.\d+)?\)?)'
+    - '\b(?:coefficient|estimate)\s+on\s+[\w%.]+\s+(?:of|is)\s*(?P<value>-?\d+(?:\.\d+)?)'
+  r_squared:
+    - '\b(?:R-?squared|coefficient\s+of\s+determination|R2|R²)(?:\s+statistic)?\s*(?:of|is|=|:)?\s*(?P<value>0?\.\d+)'
+  p_value:
+    - '\bp-?values?\b[^.\d]{0,25}(?P<value>\d(?:\.\d+)?)(?!\d)'
+    - '(?<![A-Za-z])p\s*(?:=|<|≤)\s*(?P<value>\d(?:\.\d+)?)\b'
+  t_stat:
+    - '\b(?:t|z)\s*-?\s*stats?(?:istic)?\s*(?:of|=|is|:)?\s*(?P<value>-?\d+(?:\.\d+)?)'
+    - '\b(?:t|z)\s*=\s*(?P<value>-?\d+(?:\.\d+)?)'
+  sample_size:
+    - '\b(?:N|n)\s*=\s*(?P<value>[\d,]+)\b'
+    - '\b(?P<value>\d{1,3}(?:,\d{3})+|\d+)\s+observations?\b'
+  percent:
+    - '(?P<value>-?\d+(?:\.\d+)?)\s*(?:%|per\s*cent|percent(?:age\s+points?)?|percentage\s+points?|\bpp\b|basis\s+points?|bps\b)'
+  confidence_interval:
+    - '\b(?:95|90|99)(?:\.\d+)?%\s*(?:CI|confidence\s+interval)\s*(?:of|is|=|:)?\s*[([]?\s*(?P<value>-?\d+(?:\.\d+)?)'
+units:
+  estimate: coefficient
+  r_squared: R-squared
+  p_value: p-value
+  t_stat: t-stat
+  sample_size: observations
+  percent: pp
+  confidence_interval: unspecified

@@ -1,0 +1,92 @@
+# Core configuration for layout cleaning, section role classification, claims, math, and OCR.
+layout:
+  header_top_ratio: 0.05
+  footer_bottom_ratio: 0.94
+  running_header_min_pages: 3
+  running_header_y_tolerance: 3.0
+  margin_left_ratio: 0.12
+  margin_right_ratio: 0.88
+  footnote_rule_max_height: 2.0
+  footnote_rule_min_width_ratio: 0.10
+  footnote_rule_max_width_ratio: 0.55
+  footnote_rule_left_tolerance: 25.0
+  footnote_rule_min_y_ratio: 0.35
+  footnote_size_delta: 0.6
+  footnote_fallback_y_ratio: 0.65
+  footnote_fallback_size_delta: 1.0
+  table_full_rule_width_ratio: 0.65
+  table_numeric_token_ratio: 0.45
+  table_max_english_ratio: 0.35
+  table_min_lines: 3
+  min_sentence_length: 25
+
+sections:
+  role_patterns:
+    front_matter:
+      - '\b(?:cover\s+letter|declarations?|acknowledg(?:e)?ments?|highlights?|keywords?|jel\s+classification|conflict\s+of\s+interest|response\s+to\s+reviewers?|referee\s+report)\b'
+    abstract:
+      - '^\s*abstract\s*$'
+      - '\babstract\b'
+    introduction:
+      - '\bintroduction\b'
+      - '\boverview\b'
+    references:
+      - '^\s*(?:references|bibliography)\s*$'
+      - '\b(?:references|bibliography)\b'
+    appendix:
+      - '\b(?:appendix|appendices|supplementary|online\s+appendix)\b'
+      - '^[A-Z](?:\.\d+)*\.?\s+'
+    conclusion:
+      - '\b(?:conclusions?|concluding(?:\s+remarks)?|summary(?:\s+and\s+conclusions?)?|discussion)\b'
+    robustness:
+      - '\b(?:robustness|sensitivity|extensions?|subsamples?|alternative\s+specifications?|additional\s+checks?)\b'
+    results:
+      - '\b(?:results?|empirical(?:\s+results?|\s+analysis|\s+application|\s+findings?|\s+evidence)?|forecast(?:ing)?\s+(?:results?|evaluation|performance|accuracy)|out-of-sample|in-sample|economic\s+value|evaluation|performance|findings?|statistical\s+evaluation|trading\s+strateg(?:y|ies)|effects?\s+of|response\s+of|impact\s+of|applications?|facts?|predicting\s+\w+)\b'
+    data:
+      - '\b(?:data(?:\s+and\s+sample|\s+description|\s+set)?|database|dataset|sample|descriptive\s+statistics|corpus)\b'
+    methodology:
+      - '\b(?:method(?:ology|s)?|model(?:ling|ing|s)?|framework|econometric|setup|specification|estimation|algorithm|identification|theory|theoretical|construction|constructing|lexicon|heuristic\s+rules?|machine\s+learning\s+techniques?)\b'
+
+claims:
+  eligible_roles:
+    - abstract
+    - introduction
+    - results
+    - robustness
+    - conclusion
+  include_appendix_by_default: false
+  dedup:
+    token_jaccard_threshold: 0.55
+    number_overlap_threshold: 0.50
+    sequence_ratio_threshold: 0.72
+    canonical_role_priority:
+      - results
+      - abstract
+      - conclusion
+      - introduction
+      - robustness
+      - other
+
+math:
+  tag_min_x1_ratio: 0.72
+  baseline_cluster_ratio: 0.45
+  multiline_gap_ratio: 1.6
+  unnumbered_indent_pt: 15.0
+  unnumbered_gap_ratio: 0.4
+  tall_multiline_ratio: 2.2
+  max_english_words_in_display: 2
+  epilogue_sentence_window: 3
+
+ocr:
+  default_backend: none
+  default_policy: fallback
+  crop_dpi: 250
+  pad_x_pt: 6.0
+  pad_y_pt: 4.0
+  tag_gap_pt: 4.0
+  glm_model: zai-org/GLM-OCR
+  timeout_seconds: 60
+
+nlp:
+  spacy_model: en_core_web_sm
+  enable_causal_triples: false

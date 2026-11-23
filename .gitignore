@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv
+
+# Archived obsolete files (never committed)
+archive/
+
+# Local paper registry (may contain local/unpublished manuscript paths)
+references/configs/papers.yaml
+
+# Downloaded papers not committed (redistribution-restricted, e.g. NBER, AEA)
+examples/papers/*
+!examples/papers/shapiro_2017-01_sentiment.pdf
+!examples/papers/acosta_et_al_2025-30_usmpd.pdf

@@ -1,0 +1,52 @@
+# AI-labeled 10 headline claims, NBER Working Paper 30555 (The Dynamics of Large Inflation Surges, Blanco, Ottonello & Ranosova, Oct 2022), w30555.pdf
+# Pages are PDF pages (1-indexed). One sentence per claim. Labeling done from full-text read only; no pipeline output seen beforehand.
+- paper: w30555
+  page: 2
+  section: Abstract
+  type: mechanism
+  quote: "Inflation following surges tends to be persistent, with the duration of disinflation exceeding that of the initial inflation increase."
+- paper: w30555
+  page: 2
+  section: Abstract
+  type: mechanism
+  quote: "Policy responses are characterized by hikes in nominal interest rates but no tightening of real rates or fiscal balances."
+- paper: w30555
+  page: 3
+  section: "1. Introduction"
+  type: magnitude
+  quote: "The shape of inflation follows an “inverted-swoosh” pattern, with the average duration of disinflation lasting 3 to 4 years and being 3 times longer than the initial inflation increase."
+- paper: w30555
+  page: 4
+  section: "1. Introduction"
+  type: magnitude
+  quote: "Average 5-year-5-year (5y5y)-forward forecasts (i.e., the average expected inflation over the 5-year period that begins 5 years from each date) exhibit an initial increase around 0.3 p.p. with the beginning of the surge and remain above their pre-surge levels throughout the disinflation phase."
+- paper: w30555
+  page: 9
+  section: "3.1. Inflation dynamics"
+  type: magnitude
+  quote: "Panel (a) of Figure 2 shows that inflation tends to exhibit a spike during the first year of the episode (with a 5.4 p.p. average increase) followed by prolonged disinflation."
+- paper: w30555
+  page: 11
+  section: "3.2. Inflation expectations dynamics"
+  type: magnitude
+  quote: "Forecast errors increase by 4.3 p.p. in the first year of the episode, which suggests that inflation surges tend to be largely unexpected."
+- paper: w30555
+  page: 11
+  section: "3.2. Inflation expectations dynamics"
+  type: magnitude
+  quote: "Long-run inflation expectations increase by 0.3 p.p. in the first 2 years of the surge."
+- paper: w30555
+  page: 13
+  section: "3.3. Monetary and fiscal policy dynamics"
+  type: magnitude
+  quote: "Panel (a) of Figure 4 shows that short-term nominal interest rates increase by 2.6 p.p. on average following an inflation surge and remain high throughout the disinflation."
+- paper: w30555
+  page: 13
+  section: "3.3. Monetary and fiscal policy dynamics"
+  type: negative_result
+  quote: "In spite of these nominal interest rate hikes, real rates—that is, computed 1-year-ahead inflation forecast data—do not increase following the increase in inflation or throughout the disinflation phase."
+- paper: w30555
+  page: 13
+  section: "3.3. Monetary and fiscal policy dynamics"
+  type: magnitude
+  quote: "Fiscal balances deteriorate by 0.5 p.p. of GDP the year following the inflation surge; this is because expenditure mildly increases and revenues contract following the surge."

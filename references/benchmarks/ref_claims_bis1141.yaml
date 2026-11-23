@@ -1,0 +1,52 @@
+# AI-labeled 10 headline claims, BIS Working Paper No 1141 (Is high debt constraining monetary policy? Evidence from inflation expectations, Brandao-Marques, Casiraghi, Gelos, Harrison & Kamber, Nov 2023), bis1141.pdf
+# Pages are PDF pages (1-indexed). One sentence per claim. Labeling done from full-text read only; no pipeline output seen beforehand.
+- paper: bis1141
+  page: 3
+  section: Abstract
+  type: mechanism
+  quote: "It finds that debt surprises raise long-term inflation expectations in Emerging Market Economies in a persistent way, but not in advanced economies."
+- paper: bis1141
+  page: 3
+  section: Abstract
+  type: mechanism
+  quote: "The effects are stronger when initial debt levels are already high, when inflation levels are initially high, and when debt dollarization is significant."
+- paper: bis1141
+  page: 5
+  section: Introduction
+  type: magnitude
+  quote: "Specifically, for Emerging Market Economies, a 10-percentage-point increase in the government-debt-to-GDP ratio triggers a statistically significant 20-basis point increase in long-term inflation expectations within the first year after the shock, which subsequently reaches a peak of 70-basis point within the second year."
+- paper: bis1141
+  page: 11
+  section: "Main results – Emerging Market- vs. Advanced Economies"
+  type: negative_result
+  quote: "For advanced economies, the response of inflation expectations to a debt shock is zero across all horizons."
+- paper: bis1141
+  page: 12
+  section: "Main results – Emerging Market- vs. Advanced Economies"
+  type: negative_result
+  quote: "In our sample, debt surprises do not forecast persistently higher deficits."
+- paper: bis1141
+  page: 14
+  section: "Government debt level"
+  type: negative_result
+  quote: "The graph shows that for countries in the low-debt group, the impact of the unanticipated debt increase on inflation expectations is statistically indistinguishable from zero."
+- paper: bis1141
+  page: 14
+  section: "Government debt level"
+  type: magnitude
+  quote: "By contrast, high-debt countries experience as much as a 100-basis point increase in long-term inflation expectations after two years in response to a 10-percent surprise rise in the debt-to-GDP ratio."
+- paper: bis1141
+  page: 16
+  section: "Inflation level"
+  type: magnitude
+  quote: "Long-term inflation expectations increase by about 40 basis points after two years for countries with initial inflation levels at the 90th percentile of the emerging market sample, rising to 50 basis points after three years (Graph 6 and Table 7)."
+- paper: bis1141
+  page: 18
+  section: "Debt dollarization"
+  type: significance
+  quote: "The results show a positive and statistically significant effect of the interaction between foreign currency debt levels, debt levels, and debt surprises, albeit only after 22 months."
+- paper: bis1141
+  page: 21
+  section: "Robustness"
+  type: robustness
+  quote: "Our results remain quantitatively and qualitatively robust to introducing these controls (Graph 9)."

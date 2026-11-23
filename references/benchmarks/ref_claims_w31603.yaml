@@ -1,0 +1,52 @@
+# AI-labeled 10 headline claims, NBER Working Paper 31603 (The Macroeconomic Effects of the Federal Reserve's Conventional and Unconventional Monetary Policies, Eric T. Swanson, Aug 2023), w31603.pdf
+# Pages are PDF pages (1-indexed). One sentence per claim. Labeling done from full-text read only; no pipeline output seen beforehand.
+- paper: w31603
+  page: 2
+  section: Abstract
+  type: mechanism
+  quote: "I find that changes in the federal funds rate have had the most powerful effects on the U.S. economy, followed by forward guidance and, lastly, LSAPs."
+- paper: w31603
+  page: 5
+  section: "1. Introduction"
+  type: mechanism
+  quote: "However, I show here that commodity prices respond more strongly to the federal funds rate, and Swanson (2021) shows that the stock market responds more strongly to the federal funds rate, so these outsized effects may be contributing to the greater effects of the federal funds rate on economic variables like inflation and output."
+- paper: w31603
+  page: 22
+  section: "4.1 The Fed Response to News Channel"
+  type: significance
+  quote: "Nevertheless, many of the coefficients in Table 1 are statistically and economically significant, with regression R2 of up to 18 percent."
+- paper: w31603
+  page: 23
+  section: "4.2 Economic Effects of Changes in the Federal Funds Rate"
+  type: magnitude
+  quote: "Industrial production falls slightly on impact and declines further to a trough of about 0.6 percent after 9 months, and the CPI responds only slightly."
+- paper: w31603
+  page: 23
+  section: "4.2 Economic Effects of Changes in the Federal Funds Rate"
+  type: magnitude
+  quote: "Commodity prices fall about 0.5% in the impact month and decline further, by a little over 1%, before converging back toward baseline."
+- paper: w31603
+  page: 25
+  section: "4.2 Economic Effects of Changes in the Federal Funds Rate"
+  type: mechanism
+  quote: "The less attenuated responses in Figure 2 here thus suggest that changes in the federal funds rate are less contaminated by a Fed Response to News bias than are changes in forward guidance—i.e., financial markets seem to have better understood how the Fed would change the federal funds rate in response to incoming economic news, relative to forward guidance."
+- paper: w31603
+  page: 27
+  section: "4.3 Economic Effects of Changes in Forward Guidance"
+  type: significance
+  quote: "The first point to note is that the first-stage F-statistics for these regressions are much higher than was the case for the federal funds rate regressions earlier: 39.7 for the first column of Figure 3 and 28.5 for the second column."
+- paper: w31603
+  page: 29
+  section: "4.3 Economic Effects of Changes in Forward Guidance"
+  type: mechanism
+  quote: "As a result, I estimate that changes in the federal funds rate had substantially more powerful effects on the economy than changes in forward guidance."
+- paper: w31603
+  page: 30
+  section: "4.4 Economic Effects of Changes in LSAPs"
+  type: significance
+  quote: "For the unadjusted LSAP instrument zlsap t , the first-stage F-statistic is 9.2, while for the orthogonalized instrument zlsap⊥ t , the statistic is 8.3, both of which are a bit below the weak instruments threshold of 10 suggested by Stock and Watson (2012)."
+- paper: w31603
+  page: 32
+  section: "4.4 Economic Effects of Changes in LSAPs"
+  type: negative_result
+  quote: "I thus estimate that the effects of LSAPs on the U.S. economy are the weakest and least robust of the three policies."

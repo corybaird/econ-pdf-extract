@@ -1,0 +1,52 @@
+# AI-labeled 10 headline claims, BIS Working Paper 1395 (MaRCo@BIS: AI-agentic econometric analysis for central bankers, Lombardi, Park & Perez-Cruz, Nov 2026), bis1395.pdf
+# Pages are PDF pages (1-indexed). One sentence per claim. Labeling done from full-text read only; no variant output seen beforehand.
+- paper: bis1395
+  page: 3
+  section: Abstract
+  type: proposal
+  quote: "This paper introduces MaRCo@BIS, the MAcroeconometric Research Companion: a framework of plain-text workflow files, a verified dictionary of canonical model specifications and a tested reference library, read by an off-the-shelf agentic coding environment."
+- paper: bis1395
+  page: 3
+  section: Abstract
+  type: proposal
+  quote: "We document the design, benchmark the agent's replications of three widely-used structural VARs against the originals, and illustrate the framework across five exercises ranging from a verified replication to an open design question."
+- paper: bis1395
+  page: 18
+  section: "4.2 A session, step by step (Mode A)"
+  type: negative_result
+  quote: "In the canonical run and both updated runs, the 90% band on the output response includes zero in each of months 1 to 24."
+- paper: bis1395
+  page: 18
+  section: "4.2 A session, step by step (Mode A)"
+  type: magnitude
+  quote: "Uhlig's agnostic finding therefore also holds in these adaptations, despite the additional twenty-three years of data and the changes to the policy rate and reserves variables."
+- paper: bis1395
+  page: 21
+  section: "4.3 From PDF to validated replication: ingesting a new paper (Mode B)"
+  type: significance
+  quote: "The assembly met the by-now familiar obstacles (two more bot-protected hosts, and a subtle quarter-labeling mismatch between the pre-collected panel and the fetched series, which the session diagnosed and fixed), and the estimation validated on the first pass: a first-stage F statistic of 24.2 against the paper's published 23.1, a stable system, and the paper's qualitative story reproduced, with energy costs passing through strongly to energy prices and only modestly to core inflation."
+- paper: bis1395
+  page: 22
+  section: "4.4 Benchmarking against the originals"
+  type: magnitude
+  quote: "Where the specification pins down a unique answer on deposited data (Panel C), reproduction is exact: the input series are identical to the author's archive, and all nine impulse responses match the output of the author's own code to roughly 10−12, the tiny residual showing that the numbers were recomputed independently, not copied."
+- paper: bis1395
+  page: 22
+  section: "4.4 Benchmarking against the originals"
+  type: magnitude
+  quote: "On the public subset the headline pass-through magnitude appears broadly similar while its persistence does not; the missing series are a plausible cause, though this cannot be confirmed without them."
+- paper: bis1395
+  page: 23
+  section: "4.5 Paired sessions with and without MaRCo@BIS"
+  type: magnitude
+  quote: "All four sessions correctly reproduced Uhlig's headline finding, with the credible band on the output response straddling zero throughout."
+- paper: bis1395
+  page: 27
+  section: "5.3 Results, the agent's dissent and our override"
+  type: magnitude
+  quote: "It was about 0.85 in the initial specification and remained roughly between 0.6 and 1.1 in checks using two, four or eight lags, three shrinkage settings, and omission of the anticipation control."
+- paper: bis1395
+  page: 29
+  section: "5.3 Results, the agent's dissent and our override"
+  type: negative_result
+  quote: "Under the alternative identification combining sign and zero restrictions, the output response was no longer clearly positive: its reported uncertainty intervals included zero at every horizon."

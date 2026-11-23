@@ -1,0 +1,103 @@
+# Patterns for display equation detection, logic classification, symbol definitions, and cross-referencing.
+equation_tag_regex: '\(((?:[1-9]\d*|[A-Z])(?:\.\d+)*)\)\s*$'
+
+cross_ref_patterns:
+  - '\bEq(?:uation)?s?\.?\s*\((?P<tag>(?:[1-9]\d*|[A-Z])(?:\.\d+)*)\)'
+  - '\b(?:in|from|by|using|of|see|under|via)\s+\((?P<tag>(?:[1-9]\d*|[A-Z])(?:\.\d+)*)\)'
+  - '\bEq(?:uation)?s?\.?\s*\((?P<tag1>(?:[1-9]\d*|[A-Z])(?:\.\d+)*)\)\s*(?:and|to|through|,|-)\s*\((?P<tag2>(?:[1-9]\d*|[A-Z])(?:\.\d+)*)\)'
+
+math_kind_cues:
+  estimation_problem:
+    - '\barg\s*min\b'
+    - '\barg\s*max\b'
+    - '\bargmin\b'
+    - '\bargmax\b'
+    - '\bmin(?:imize)?\b.*\bs\.?t\.?'
+    - '\bsubject\s+to\b'
+    - '\bminimizing\s+the\b.*\bloss\b'
+    - '\bobtained\s+by\s+solving\b'
+    - '\bmaximiz(?:e|es|ing)\b'
+    - '\bminimiz(?:e|es|ing)\b'
+    - '\bs\.t\.\b'
+  evaluation_formula:
+    - '\bR\s*\^?2\s*_?\s*oos\b'
+    - '\bR2_?os\b'
+    - '\bCER\b'
+    - '\bCRPS\b'
+    - '\bMSPE(?:-adj)?\b'
+    - '\bRMSE\b'
+    - '\bMAE\b'
+    - '\bMSE\b'
+    - '\bQLIKE\b'
+    - '\bpinball\b'
+    - '\bACE\b'
+    - '\bPIPS\b'
+    - '\bSharpe\b'
+    - '\bVaR\b'
+    - '\bDM\s+test\b'
+    - '\bCW\s+test\b'
+    - '\bMCS\b'
+    - '\bTheil\b'
+  model_specification:
+    - '\btakes?\s+the\s+form\b'
+    - '\bis\s+formulated\s+as\b'
+    - '\bas\s+follows\s*:'
+    - '\bis\s+given\s+by\b'
+    - '\bfollows\s*:'
+    - '\bregression\s+(?:becomes|is|model)\b'
+    - '\bbudget\s+constraint\b'
+    - '\bproduction\s+function\b'
+    - '\butility\s+function\b'
+    - '\bevolves?\s+according\s+to\b'
+    - '\bis\s+specified\s+as\b'
+    - '\beuler\s+equation\b'
+    - '\bpredictive\s+regression\b'
+
+prose_logic_patterns:
+  assumption: '^Assumption(?:\s+[A-Z0-9.]+)?(?:\s*[:.\(\-]|\s+[A-Z]|\s*$)'
+  algorithm: '^(?:(?:\d+(?:\.\d+)*\.?\s+)?(?:Suggested\s+)?Algorithm(?:\s+[A-Z0-9.]+)?(?:\s*[:.\-\(].*)?)$'
+  proposition: '^(?:Proposition|Theorem|Lemma|Corollary)\s+[A-Z0-9.]+'
+  definition: '^Definition\s+[A-Z0-9.]+'
+
+symbol_definition_patterns:
+  where_intro: '\bwhere\b'
+  in_eq_intro: '\bIn\s+(?:Eq(?:uation)?\.?\s*)?\((?P<tag>(?:[1-9]\d*|[A-Z])(?:\.\d+)*)\)'
+  forward_verb: '(?:denotes?|indicates?|represents?|measures?|identifies?|corresponds?\s+to|refers?\s+to|is\s+(?:the|a|an)|is\s+defined\s+as|equals?)'
+  reverse_verb: '(?:we\s+)?(?:denote|define)'
+
+degradation_patterns:
+  radical_fragment: '\bv\s+u(?:\s+u)*\s+t\b'
+  flattened_big_op: '(?:^|\s)[ZXP]\s*(?:∞|\\infty|\d|t\s*=|i\s*=|n\s*=)'
+  accent_garble: '(?:exp\(\s*d\b|\b[A-Za-z]\s*\^\s*$)'
+
+named_metrics:
+  R2_oos:
+    - '\bR\s*\^?2\s*_?\s*oos\b'
+    - '\bR2_?os\b'
+    - '\bout-of-sample\s+R\s*\^?2\b'
+  CER:
+    - '\bCER\b'
+    - '\bcertainty\s+equivalent\s+return\b'
+  CRPS:
+    - '\bCRPS\b'
+  MSPE-adj:
+    - '\bMSPE(?:-adj)?\b'
+  pinball:
+    - '\bpinball\b'
+  ACE:
+    - '\bACE\b'
+  PIPS:
+    - '\bPIPS\b'
+  Sharpe:
+    - '\bSharpe(?:\s+ratio)?\b'
+  VaR:
+    - '\bVaR\b'
+    - '\bValue-at-Risk\b'
+  RMSE:
+    - '\bRMSE\b'
+  MAE:
+    - '\bMAE\b'
+  MSE:
+    - '\bMSE\b'
+  QLIKE:
+    - '\bQLIKE\b'

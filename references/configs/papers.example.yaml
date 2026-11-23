@@ -1,0 +1,18 @@
+# Example paper registry using public/synthetic repo-relative PDFs only.
+# Copy to references/configs/papers.yaml (gitignored) to add local manuscripts.
+papers:
+  - id: example
+    authors: Example A. Author and Example B. Author
+    title: "The Output Response to Monetary Policy Shocks: A Direct Projection Approach"
+    journal: Synthetic Example
+    draft_pdf: examples/example_paper.pdf
+  - id: shapiro
+    authors: Shapiro, Sudhof & Wilson (2022)
+    title: Measuring News Sentiment
+    journal: Journal of Econometrics (FRBSF WP 2017-01, committed copy)
+    draft_pdf: examples/papers/shapiro_2017-01_sentiment.pdf
+  - id: acosta_usmpd
+    authors: Acosta, Ajello, Bauer, Loria & Miranda-Agrippino (2025)
+    title: "Financial Market Effects of FOMC Communication: Evidence from a New Event-Study Database"
+    journal: FRBSF Working Paper 2025-30 (committed copy)
+    draft_pdf: examples/papers/acosta_et_al_2025-30_usmpd.pdf

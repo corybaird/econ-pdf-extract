@@ -1,0 +1,37 @@
+# Public benchmark papers for econ-pdf eval (references/benchmarks/ref_claims_*.yaml).
+# PDFs are NOT committed (redistribution-restricted). Download the 4 URLs below
+# before running the eval; see docs/benchmark.md for the exact commands.
+# Use with: uv run --inexact econ-pdf eval --refs-dir references/benchmarks --config references/benchmarks/papers.yaml
+papers:
+  - id: bis1395
+    authors: Lombardi, Park & Perez-Cruz (2026)
+    title: "MaRCo@BIS: AI-agentic econometric analysis for central bankers"
+    journal: "BIS Working Paper No 1395"
+    citation: "Marco Jacopo Lombardi, Taejin Park and Fernando Perez-Cruz (2026), \"MaRCo@BIS: AI-agentic econometric analysis for central bankers\", BIS Working Paper No 1395, November 2026."
+    pdf_url: https://www.bis.org/publications/working-paper-1395-marcobis-ai-agentic-econometric-analysis-central-bankers.pdf
+    sha256: fd178c0f251aebbf6cb898236af3962a2ae339f7258b11d013958076a333647a
+    pdf_path: examples/papers/bis1395.pdf
+  - id: bis1141
+    authors: Brandao-Marques, Casiraghi, Gelos, Harrison & Kamber (2023)
+    title: "Is high debt constraining monetary policy? Evidence from inflation expectations"
+    journal: "BIS Working Paper No 1141"
+    citation: "Luiz Brandao-Marques, Giovanni Casiraghi, Gaston Gelos, Ryan Harrison and Gunes Kamber (2023), \"Is high debt constraining monetary policy? Evidence from inflation expectations\", BIS Working Paper No 1141."
+    pdf_url: https://www.bis.org/publications/working-paper-1141-high-debt-constraining-monetary-policy-evidence-inflation-expectations.pdf
+    sha256: 6730f0066b73fbe14dea75e5864de5a367c314db5d5f62d197d6c33180ac2d92
+    pdf_path: examples/papers/bis1141.pdf
+  - id: w30555
+    authors: Blanco, Ottonello & Ranosova (2022)
+    title: "The Dynamics of Large Inflation Surges"
+    journal: NBER Working Paper 30555
+    citation: "Andres Blanco, Pablo Ottonello and Tereza Ranosova (2022), \"The Dynamics of Large Inflation Surges\", NBER Working Paper No 30555."
+    pdf_url: https://www.nber.org/system/files/working_papers/w30555/w30555.pdf
+    sha256: b36dc192b7762bb5473db25143b3aea7b9caf8b55c053b3e38f9eb57d1dbc0ec
+    pdf_path: examples/papers/w30555.pdf
+  - id: w31603
+    authors: Swanson (2023)
+    title: "The Macroeconomic Effects of the Federal Reserve's Conventional and Unconventional Monetary Policies"
+    journal: NBER Working Paper 31603
+    citation: "Eric T. Swanson (2023), \"The Macroeconomic Effects of the Federal Reserve's Conventional and Unconventional Monetary Policies\", NBER Working Paper No 31603."
+    pdf_url: https://www.nber.org/system/files/working_papers/w31603/w31603.pdf
+    sha256: 2904886c7ea18a6d705a26e33cab78217cb1eff2ae651b6b2b9f3ebc94eaca90
+    pdf_path: examples/papers/w31603.pdf
